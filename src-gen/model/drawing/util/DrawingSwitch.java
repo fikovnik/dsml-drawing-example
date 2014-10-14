@@ -92,6 +92,20 @@ public class DrawingSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case DrawingPackage.PEN_UP: {
+				PenUp penUp = (PenUp)theEObject;
+				T result = casePenUp(penUp);
+				if (result == null) result = caseCommand(penUp);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case DrawingPackage.PEN_DOWN: {
+				PenDown penDown = (PenDown)theEObject;
+				T result = casePenDown(penDown);
+				if (result == null) result = caseCommand(penDown);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -153,6 +167,36 @@ public class DrawingSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseTurn(Turn object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Pen Up</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Pen Up</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePenUp(PenUp object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Pen Down</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Pen Down</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePenDown(PenDown object) {
 		return null;
 	}
 

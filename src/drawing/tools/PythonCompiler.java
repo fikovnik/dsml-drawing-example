@@ -3,6 +3,8 @@ package drawing.tools;
 import model.drawing.Command;
 import model.drawing.DrawingScript;
 import model.drawing.Forward;
+import model.drawing.PenDown;
+import model.drawing.PenUp;
 import model.drawing.Turn;
 
 public class PythonCompiler extends AbstractModelLoadingTool implements Compiler {
@@ -33,6 +35,10 @@ public class PythonCompiler extends AbstractModelLoadingTool implements Compiler
 				} else {
 					sb.append(String.format("p.left(%d)", -turn.getDegrees()) + endl);
 				}
+			} else if (cmd instanceof PenDown) {
+				sb.append("p.pendown()" + endl);
+			} else if (cmd instanceof PenUp) {
+				sb.append("p.penup()" + endl);
 			} else {
 				throw new RuntimeException("Unknown command " + cmd);
 			}			

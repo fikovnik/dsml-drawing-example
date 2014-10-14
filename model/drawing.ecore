@@ -20,4 +20,6 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="degrees" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PenUp" eSuperTypes="#//Command"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PenDown" eSuperTypes="#//Command"/>
 </ecore:EPackage>

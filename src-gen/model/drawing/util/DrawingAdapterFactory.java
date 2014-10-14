@@ -84,6 +84,14 @@ public class DrawingAdapterFactory extends AdapterFactoryImpl {
 				return createTurnAdapter();
 			}
 			@Override
+			public Adapter casePenUp(PenUp object) {
+				return createPenUpAdapter();
+			}
+			@Override
+			public Adapter casePenDown(PenDown object) {
+				return createPenDownAdapter();
+			}
+			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -156,6 +164,34 @@ public class DrawingAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createTurnAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link model.drawing.PenUp <em>Pen Up</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see model.drawing.PenUp
+	 * @generated
+	 */
+	public Adapter createPenUpAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link model.drawing.PenDown <em>Pen Down</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see model.drawing.PenDown
+	 * @generated
+	 */
+	public Adapter createPenDownAdapter() {
 		return null;
 	}
 

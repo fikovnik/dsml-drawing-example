@@ -3,6 +3,8 @@ package drawing.tools;
 import model.drawing.Command;
 import model.drawing.DrawingScript;
 import model.drawing.Forward;
+import model.drawing.PenDown;
+import model.drawing.PenUp;
 import model.drawing.Turn;
 import drawing.java2d.swing.SwingPen;
 import drawing.java2d.swing.SwingSheet;
@@ -23,6 +25,10 @@ public class Java2DSimulator extends AbstractModelLoadingTool implements Simulat
 				pen.forward(((Forward)cmd).getSteps());
 			} else if (cmd instanceof Turn){
 				pen.turn(((Turn)cmd).getDegrees());
+			} else if (cmd instanceof PenDown) {
+				pen.penDown();
+			} else if (cmd instanceof PenUp) {
+				pen.penUp();
 			} else {
 				throw new RuntimeException("Unknown command "+cmd);
 			}

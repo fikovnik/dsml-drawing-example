@@ -15,6 +15,8 @@ public class SwingPen implements Pen {
 	private double direction = 0;
 
 	private SwingSheet sheet = null;
+	
+	private boolean penDown = true;
 
 	public SwingPen(SwingSheet sheet) {
 		if (sheet == null) {
@@ -39,8 +41,10 @@ public class SwingPen implements Pen {
 		double nx = x + steps * Math.cos(direction);
 		double ny = y + steps * Math.sin(direction);
 
-		sheet.drawLine(x, y, nx, ny, Color.BLACK);
-
+		if (penDown) {
+			sheet.drawLine(x, y, nx, ny, Color.BLACK);
+		}
+		
 		x = nx;
 		y = ny;
 
@@ -51,6 +55,22 @@ public class SwingPen implements Pen {
 		g2.setColor(Color.BLACK);
 		g2.translate(x, y);
 		g2.rotate(direction);
-		g2.draw(penShape);
+		if (penDown) {			
+			g2.fill(penShape);
+		} else {			
+			g2.draw(penShape);
+		}
+	}
+
+	@Override
+	public void penUp() {
+		penDown = false;
+		sheet.repaint();
+	}
+
+	@Override
+	public void penDown() {
+		penDown = true;
+		sheet.repaint();
 	}
 }

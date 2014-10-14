@@ -7,6 +7,8 @@ import model.drawing.DrawingFactory;
 import model.drawing.DrawingPackage;
 import model.drawing.DrawingScript;
 import model.drawing.Forward;
+import model.drawing.PenDown;
+import model.drawing.PenUp;
 import model.drawing.Turn;
 
 import model.drawing.util.DrawingValidator;
@@ -52,6 +54,20 @@ public class DrawingPackageImpl extends EPackageImpl implements DrawingPackage {
 	 * @generated
 	 */
 	private EClass turnEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass penUpEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass penDownEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -218,6 +234,24 @@ public class DrawingPackageImpl extends EPackageImpl implements DrawingPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getPenUp() {
+		return penUpEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getPenDown() {
+		return penDownEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public DrawingFactory getDrawingFactory() {
 		return (DrawingFactory)getEFactoryInstance();
 	}
@@ -254,6 +288,10 @@ public class DrawingPackageImpl extends EPackageImpl implements DrawingPackage {
 
 		turnEClass = createEClass(TURN);
 		createEAttribute(turnEClass, TURN__DEGREES);
+
+		penUpEClass = createEClass(PEN_UP);
+
+		penDownEClass = createEClass(PEN_DOWN);
 	}
 
 	/**
@@ -286,6 +324,8 @@ public class DrawingPackageImpl extends EPackageImpl implements DrawingPackage {
 		// Add supertypes to classes
 		forwardEClass.getESuperTypes().add(this.getCommand());
 		turnEClass.getESuperTypes().add(this.getCommand());
+		penUpEClass.getESuperTypes().add(this.getCommand());
+		penDownEClass.getESuperTypes().add(this.getCommand());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(drawingScriptEClass, DrawingScript.class, "DrawingScript", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -301,6 +341,10 @@ public class DrawingPackageImpl extends EPackageImpl implements DrawingPackage {
 
 		initEClass(turnEClass, Turn.class, "Turn", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTurn_Degrees(), ecorePackage.getEInt(), "degrees", null, 1, 1, Turn.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(penUpEClass, PenUp.class, "PenUp", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(penDownEClass, PenDown.class, "PenDown", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

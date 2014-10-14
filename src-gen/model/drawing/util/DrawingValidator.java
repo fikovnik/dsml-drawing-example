@@ -94,6 +94,10 @@ public class DrawingValidator extends EObjectValidator {
 				return validateForward((Forward)value, diagnostics, context);
 			case DrawingPackage.TURN:
 				return validateTurn((Turn)value, diagnostics, context);
+			case DrawingPackage.PEN_UP:
+				return validatePenUp((PenUp)value, diagnostics, context);
+			case DrawingPackage.PEN_DOWN:
+				return validatePenDown((PenDown)value, diagnostics, context);
 			default:
 				return true;
 		}
@@ -156,7 +160,7 @@ public class DrawingValidator extends EObjectValidator {
 		// -> specify the condition that violates the constraint
 		// -> verify the diagnostic details, including severity, code, and message
 		// Ensure that you remove @generated or mark it @generated NOT
-		if (turn.getDegrees() >= 180 || turn.getDegrees() <= -180) {
+		if (false) {
 			if (diagnostics != null) {
 				diagnostics.add
 					(createDiagnostic
@@ -171,6 +175,24 @@ public class DrawingValidator extends EObjectValidator {
 			return false;
 		}
 		return true;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validatePenUp(PenUp penUp, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(penUp, diagnostics, context);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validatePenDown(PenDown penDown, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return validate_EveryDefaultConstraint(penDown, diagnostics, context);
 	}
 
 	/**

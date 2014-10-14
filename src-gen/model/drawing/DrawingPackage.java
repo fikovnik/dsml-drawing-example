@@ -224,6 +224,63 @@ public interface DrawingPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link model.drawing.impl.PenUpImpl <em>Pen Up</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see model.drawing.impl.PenUpImpl
+	 * @see model.drawing.impl.DrawingPackageImpl#getPenUp()
+	 * @generated
+	 */
+	int PEN_UP = 4;
+
+	/**
+	 * The number of structural features of the '<em>Pen Up</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PEN_UP_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Pen Up</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PEN_UP_OPERATION_COUNT = COMMAND_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link model.drawing.impl.PenDownImpl <em>Pen Down</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see model.drawing.impl.PenDownImpl
+	 * @see model.drawing.impl.DrawingPackageImpl#getPenDown()
+	 * @generated
+	 */
+	int PEN_DOWN = 5;
+
+	/**
+	 * The number of structural features of the '<em>Pen Down</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PEN_DOWN_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Pen Down</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PEN_DOWN_OPERATION_COUNT = COMMAND_OPERATION_COUNT + 0;
+
+
+	/**
 	 * Returns the meta object for class '{@link model.drawing.DrawingScript <em>Script</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -328,6 +385,26 @@ public interface DrawingPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getTurn_Degrees();
+
+	/**
+	 * Returns the meta object for class '{@link model.drawing.PenUp <em>Pen Up</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Pen Up</em>'.
+	 * @see model.drawing.PenUp
+	 * @generated
+	 */
+	EClass getPenUp();
+
+	/**
+	 * Returns the meta object for class '{@link model.drawing.PenDown <em>Pen Down</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Pen Down</em>'.
+	 * @see model.drawing.PenDown
+	 * @generated
+	 */
+	EClass getPenDown();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -439,6 +516,26 @@ public interface DrawingPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute TURN__DEGREES = eINSTANCE.getTurn_Degrees();
+
+		/**
+		 * The meta object literal for the '{@link model.drawing.impl.PenUpImpl <em>Pen Up</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see model.drawing.impl.PenUpImpl
+		 * @see model.drawing.impl.DrawingPackageImpl#getPenUp()
+		 * @generated
+		 */
+		EClass PEN_UP = eINSTANCE.getPenUp();
+
+		/**
+		 * The meta object literal for the '{@link model.drawing.impl.PenDownImpl <em>Pen Down</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see model.drawing.impl.PenDownImpl
+		 * @see model.drawing.impl.DrawingPackageImpl#getPenDown()
+		 * @generated
+		 */
+		EClass PEN_DOWN = eINSTANCE.getPenDown();
 
 	}
 

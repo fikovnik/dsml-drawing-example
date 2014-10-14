@@ -59,6 +59,8 @@ public class DrawingFactoryImpl extends EFactoryImpl implements DrawingFactory {
 			case DrawingPackage.DRAWING_SCRIPT: return createDrawingScript();
 			case DrawingPackage.FORWARD: return createForward();
 			case DrawingPackage.TURN: return createTurn();
+			case DrawingPackage.PEN_UP: return createPenUp();
+			case DrawingPackage.PEN_DOWN: return createPenDown();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -92,6 +94,26 @@ public class DrawingFactoryImpl extends EFactoryImpl implements DrawingFactory {
 	public Turn createTurn() {
 		TurnImpl turn = new TurnImpl();
 		return turn;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PenUp createPenUp() {
+		PenUpImpl penUp = new PenUpImpl();
+		return penUp;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PenDown createPenDown() {
+		PenDownImpl penDown = new PenDownImpl();
+		return penDown;
 	}
 
 	/**
