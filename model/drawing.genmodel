@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/drawing/src-gen" modelPluginID="drawing" modelName="Drawing"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="7.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>drawing.ecore</foreignModel>
+  <genPackages prefix="Drawing" basePackage="model" disposableProviderFactory="true"
+      ecorePackage="drawing.ecore#/">
+    <genClasses ecoreClass="drawing.ecore#//DrawingScript">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute drawing.ecore#//DrawingScript/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute drawing.ecore#//DrawingScript/width"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute drawing.ecore#//DrawingScript/height"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference drawing.ecore#//DrawingScript/commands"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="drawing.ecore#//Command"/>
+    <genClasses ecoreClass="drawing.ecore#//Forward">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute drawing.ecore#//Forward/steps"/>
+    </genClasses>
+    <genClasses ecoreClass="drawing.ecore#//Turn">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute drawing.ecore#//Turn/degrees"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

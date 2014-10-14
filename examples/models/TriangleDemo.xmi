@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ASCII"?>
+<drawing:DrawingScript xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:drawing="http://mycompany.fr/drawing/1.0" name="TriangleDemo" width="300" height="300">
+  <commands xsi:type="drawing:Forward" steps="100"/>
+  <commands xsi:type="drawing:Turn" degrees="120"/>
+  <commands xsi:type="drawing:Forward" steps="100"/>
+  <commands xsi:type="drawing:Turn" degrees="120"/>
+  <commands xsi:type="drawing:Forward" steps="100"/>
+</drawing:DrawingScript>
