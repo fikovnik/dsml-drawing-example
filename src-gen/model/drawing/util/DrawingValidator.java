@@ -153,14 +153,14 @@ public class DrawingValidator extends EObjectValidator {
 	 * Validates the DegreesWithingRange constraint of '<em>Turn</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public boolean validateTurn_DegreesWithingRange(Turn turn, DiagnosticChain diagnostics, Map<Object, Object> context) {
 		// TODO implement the constraint
 		// -> specify the condition that violates the constraint
 		// -> verify the diagnostic details, including severity, code, and message
 		// Ensure that you remove @generated or mark it @generated NOT
-		if (false) {
+		if (turn.getDegrees() >= 180 || turn.getDegrees() <= -180) {
 			if (diagnostics != null) {
 				diagnostics.add
 					(createDiagnostic
