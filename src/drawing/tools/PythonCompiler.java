@@ -31,7 +31,7 @@ public class PythonCompiler extends AbstractModelLoadingTool implements Compiler
 				if (turn.getDegrees() > 0) {
 					sb.append(String.format("p.right(%d)", turn.getDegrees()) + endl);
 				} else {
-					sb.append(String.format("p.left(%d)", turn.getDegrees()) + endl);
+					sb.append(String.format("p.left(%d)", -turn.getDegrees()) + endl);
 				}
 			} else {
 				throw new RuntimeException("Unknown command " + cmd);

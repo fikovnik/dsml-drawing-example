@@ -38,7 +38,7 @@ public class JSCompiler extends AbstractModelLoadingTool implements Compiler {
 					sb.append(String.format("p.right(%d)", turn.getDegrees())
 							+ endl);
 				} else {
-					sb.append(String.format("p.left(%d)", turn.getDegrees())
+					sb.append(String.format("p.left(%d)", -turn.getDegrees())
 							+ endl);
 				}
 			} else {
