@@ -240,7 +240,7 @@ public class CAMApplication extends JFrame implements Tool {
 
 	@Override
 	public void run(String[] args) throws Exception {
-		new CAMApplication();
+		//new CAMApplication();
 	}
 
 }
